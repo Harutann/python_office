@@ -10,21 +10,3 @@ title.text = "Hello, World!"
 subtitle.text = "python-pptx was here!"
 
 prs.save('test.pptx')
-
-from docx import Document
-
-
-def main():
-    document = Document('sample.docx')
-    document.add_picture('sample.jpg')
-    count = 0
-    for data in document.paragraphs:
-        count += len(data.text)
-
-    print(f'sample.docxの中の文字数は{count}個です。')
-
-    document.save('sample_after.docx')
-
-
-if __name__ == '__main__':
-    main()
